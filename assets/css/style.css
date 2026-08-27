@@ -128,10 +128,7 @@ button:focus-visible {
       var(--void) 100%
     ),
     linear-gradient(100deg, rgba(255, 90, 31, 0.25), rgba(20, 225, 200, 0.15)),
-    image-set(
-      url("../images/hero-athletes.webp") type("image/webp"),
-      url("../images/hero-athletes.png") type("image/png")
-    );
+    url("../images/hero-athletes.webp");
   background-size: cover;
   background-position: center;
 }
