@@ -16,7 +16,7 @@
       el.setAttribute("href", href);
     });
     document.querySelectorAll("[data-whatsapp-display]").forEach((el) => {
-      el.textContent = number ? `+${number}` : "";
+      el.textContent = number;
     });
   }
 

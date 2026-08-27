@@ -133,6 +133,15 @@ button:focus-visible {
   background-position: center;
 }
 
+/* Keep both athletes visible on portrait screens instead of cropping them. */
+@media (max-width: 767px) {
+  .hero-bg {
+    background-size: cover, cover, 115% auto;
+    background-position: center, center, center 18%;
+    background-repeat: no-repeat;
+  }
+}
+
 .hero-scanlines {
   background-image: repeating-linear-gradient(
     180deg,
