@@ -320,6 +320,16 @@ button:focus-visible {
   line-height: 1.6;
 }
 
+.schedule-coaches {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.schedule-coaches .schedule-coach {
+  margin-bottom: 1rem;
+}
+
 .schedule-times strong {
   color: var(--chalk);
   font-size: 0.92rem;
@@ -342,6 +352,10 @@ button:focus-visible {
   }
 
   .schedule-times {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-coaches {
     grid-template-columns: 1fr;
   }
 }
