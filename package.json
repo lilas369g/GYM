@@ -1,0 +1,8 @@
+{
+  "name": "al-mansour-gym",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-config.mjs",
+    "build:config": "node scripts/build-config.mjs"
+  }
+}

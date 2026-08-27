@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="نادي المنصور الرياضي للرجال والنساء في صحنايا، دمشق." />
+<title>نادي المنصور الرياضي | اشرفية صحنايا</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet" />
+
+<!-- Font Awesome (icons only, no emojis) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+<!-- Tailwind (CDN, no build step) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          void: "#0A0A0C",
+          iron: "#17171C",
+          steel: "#2A2A31",
+          ignition: "#FF5A1F",
+          volt: "#14E1C8",
+          chalk: "#F4F3EF",
+          ash: "#B3B3BB",
+        },
+        fontFamily: {
+          display: ["Tajawal", "Tajawal", "sans-serif"],
+          body: ["Tajawal", "system-ui", "sans-serif"],
+          mono: ["Tajawal", "ui-monospace", "monospace"],
+        },
+      },
+    },
+  };
+</script>
+
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-void text-chalk font-body antialiased">
+
+<!-- ============================== NAVBAR ============================== -->
+<header id="navbar" class="fixed top-0 inset-x-0 z-50 bg-void/95 backdrop-blur border-b border-steel">
+  <!-- Signature: man / woman duotone split silhouette, seamed at center -->
+  <div class="nav-split-bg" aria-hidden="true">
+    <svg viewBox="0 0 1200 100" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="manPattern" width="90" height="90" patternUnits="userSpaceOnUse">
+          <g fill="none" stroke="var(--ignition)" stroke-linecap="round">
+            <circle cx="45" cy="20" r="6" fill="var(--ignition)" stroke="none" />
+            <line x1="45" y1="26" x2="45" y2="48" stroke-width="6" />
+            <line x1="45" y1="30" x2="31" y2="14" stroke-width="4" />
+            <line x1="45" y1="30" x2="59" y2="14" stroke-width="4" />
+            <line x1="27" y1="14" x2="63" y2="14" stroke-width="3" />
+            <circle cx="27" cy="14" r="4" fill="var(--ignition)" stroke="none" />
+            <circle cx="63" cy="14" r="4" fill="var(--ignition)" stroke="none" />
+            <line x1="45" y1="48" x2="35" y2="68" stroke-width="5" />
+            <line x1="45" y1="48" x2="55" y2="66" stroke-width="5" />
+          </g>
+        </pattern>
+        <pattern id="womanPattern" width="90" height="90" patternUnits="userSpaceOnUse">
+          <g fill="none" stroke="var(--volt)" stroke-linecap="round">
+            <circle cx="45" cy="20" r="6" fill="var(--volt)" stroke="none" />
+            <line x1="45" y1="26" x2="43" y2="44" stroke-width="6" />
+            <line x1="44" y1="30" x2="57" y2="22" stroke-width="4" />
+            <line x1="44" y1="30" x2="33" y2="38" stroke-width="4" />
+            <line x1="43" y1="44" x2="59" y2="40" stroke-width="5" />
+            <line x1="43" y1="44" x2="37" y2="64" stroke-width="5" />
+          </g>
+        </pattern>
+        <linearGradient id="seamBlend" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="35%" stop-color="var(--void)" stop-opacity="0" />
+          <stop offset="50%" stop-color="var(--chalk)" stop-opacity="0.5" />
+          <stop offset="65%" stop-color="var(--void)" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="600" height="100" fill="url(#manPattern)" opacity="0.16" />
+      <rect x="600" y="0" width="600" height="100" fill="url(#womanPattern)" opacity="0.16" />
+      <rect x="0" y="0" width="1200" height="100" fill="url(#seamBlend)" opacity="0.08" />
+    </svg>
+  </div>
+
+  <div class="container-page relative z-10 mx-auto h-full max-w-7xl flex items-center justify-between px-4 sm:px-6 lg:px-10">
+    <a href="#hero" class="flex items-center gap-2 shrink-0">
+      <i class="fa-solid fa-dumbbell text-gradient text-2xl"></i>
+      <span class="font-display text-2xl tracking-wider">المنصور</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-ash">
+      <a href="#hero" class="hover:text-chalk transition-colors">الرئيسية</a>
+      <a href="#about" class="hover:text-chalk transition-colors">من نحن</a>
+      <a href="#hours" class="hover:text-chalk transition-colors">أوقات الدوام</a>
+      <a href="#products" class="hover:text-chalk transition-colors">المتجر</a>
+      <a href="#contact" class="hover:text-chalk transition-colors">تواصل معنا</a>
+    </nav>
+
+    <a
+      href="#"
+      data-whatsapp-link
+      target="_blank"
+      rel="noopener"
+      class="hidden md:inline-flex items-center gap-2 bg-gradient-brand text-void font-semibold text-sm px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
+    >
+      <i class="fa-brands fa-whatsapp text-base"></i>
+      تواصل معنا
+    </a>
+
+    <button
+      id="menu-toggle"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+      aria-label="فتح القائمة"
+      class="md:hidden text-chalk p-2 -mr-2"
+    >
+      <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden relative z-10 border-t border-steel bg-void/98">
+    <nav class="flex flex-col px-6 py-4 gap-1 font-mono text-sm uppercase tracking-widest text-ash">
+      <a href="#hero" class="py-3 border-b border-steel hover:text-chalk transition-colors">الرئيسية</a>
+      <a href="#about" class="py-3 border-b border-steel hover:text-chalk transition-colors">من نحن</a>
+      <a href="#hours" class="py-3 border-b border-steel hover:text-chalk transition-colors">أوقات الدوام</a>
+      <a href="#products" class="py-3 border-b border-steel hover:text-chalk transition-colors">المتجر</a>
+      <a href="#contact" class="py-3 border-b border-steel hover:text-chalk transition-colors">تواصل معنا</a>
+      <a
+        href="#"
+        data-whatsapp-link
+        target="_blank"
+        rel="noopener"
+        class="mt-4 mb-2 inline-flex items-center justify-center gap-2 bg-gradient-brand text-void font-semibold normal-case tracking-normal text-sm px-5 py-3 rounded-full"
+      >
+        <i class="fa-brands fa-whatsapp text-base"></i>
+        تواصل معنا
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================== HERO ============================== -->
+<section id="hero" class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+  <div
+    class="hero-bg absolute inset-0"
+    style="--hero-image:url('assets/images/hero-athletes.png');"
+    role="img"
+    aria-label="رياضي ورياضية يتدربان في أجواء احترافية"
+  ></div>
+  <div class="hero-scanlines absolute inset-0"></div>
+
+  <div class="container-page relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="font-mono text-xs sm:text-sm uppercase tracking-[0.3em] text-volt mb-5">
+        نادي المنصور الرياضي &middot; صحنايا، دمشق
+      </p>
+      <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-wide mb-6">
+        ابدأ رحلة <span class="text-gradient">تحوّل جسمك</span> اليوم
+      </h1>
+      <p class="text-ash text-base sm:text-lg max-w-xl mb-9 leading-relaxed">
+        تدرّب مع مدربين محترفين في بيئة مجهزة بالكامل ومصممة لتناسب أهدافك الرياضية.
+      </p>
+      <a
+        href="#"
+        data-whatsapp-link
+        target="_blank"
+        rel="noopener"
+        class="whatsapp-cta inline-flex items-center gap-3 bg-gradient-brand text-void font-bold text-sm sm:text-base uppercase tracking-wide px-7 py-4 sm:px-8 sm:py-4 rounded-full hover:opacity-90 transition-opacity"
+      >
+        <i class="fa-brands fa-whatsapp text-xl"></i>
+        احجز مكانك الآن
+      </a>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-chalk/70" aria-label="انتقل إلى قسم من نحن">
+    <i class="fa-solid fa-chevron-down text-2xl"></i>
+  </a>
+</section>
+
+<!-- ============================== ABOUT ============================== -->
+<section id="about" class="relative py-24 sm:py-32 bg-void overflow-hidden">
+  <i class="about-watermark fa-solid fa-fire-flame-curved text-[16rem] sm:text-[24rem] -right-10 top-1/2 -translate-y-1/2 select-none" aria-hidden="true"></i>
+
+  <div class="container-page reveal relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-10 text-center">
+    <p class="font-mono text-xs sm:text-sm uppercase tracking-[0.3em] text-ignition mb-6">
+      من نحن
+    </p>
+    <blockquote class="font-display text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-wide border-l-4 border-transparent" style="border-image: linear-gradient(180deg, var(--ignition), var(--volt)) 1;">
+      <p class="font-body font-medium text-2xl sm:text-3xl lg:text-4xl leading-snug text-chalk normal-case tracking-normal">
+        &ldquo;في نادي المنصور، نؤمن بأن اللياقة ليست مرحلة مؤقتة، بل أسلوب حياة.
+        صممنا نادينا ليكون مساحة ملهمة تتحقق فيها الأهداف وتتجاوز فيها الحدود.&rdquo;
+      </p>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============================== PRODUCTS ============================== -->
+<section id="hours" class="schedule-section relative py-24 sm:py-32 border-y border-steel overflow-hidden">
+  <div class="schedule-glow schedule-glow-orange" aria-hidden="true"></div>
+  <div class="schedule-glow schedule-glow-teal" aria-hidden="true"></div>
+
+  <div class="container-page reveal relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+    <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+      <p class="font-mono text-xs sm:text-sm tracking-[0.2em] text-volt mb-4">الحصص وأوقات التدريب</p>
+      <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl tracking-wide mb-5">اختاري حصتك وابدئي بطاقة</h2>
+      <p class="text-ash leading-relaxed">حصص جماعية مليئة بالحماس، وأوقات تدريب مخصصة للسيدات والرجال بإشراف مدربين محترفين.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+      <article class="schedule-card schedule-card-featured rounded-3xl p-6 sm:p-8">
+        <div class="schedule-card-head">
+          <span class="schedule-icon schedule-icon-orange"><i class="fa-solid fa-music"></i></span>
+          <div>
+            <span class="schedule-label">طاقة وحرق عالٍ</span>
+            <h3 class="font-display text-3xl sm:text-4xl">دروس الزومبا</h3>
+          </div>
+        </div>
+        <p class="schedule-coach"><i class="fa-solid fa-user-check"></i> مع الكوتش خلود</p>
+        <div class="schedule-days"><i class="fa-regular fa-calendar-days"></i><span>السبت · الاثنين · الأربعاء</span></div>
+        <div class="schedule-times">
+          <div><span>الحصة الصباحية</span><strong>10:00 صباحاً</strong></div>
+          <div><span>الحصة المسائية</span><strong>6:10 مساءً</strong></div>
+        </div>
+      </article>
+
+      <article class="schedule-card rounded-3xl p-6 sm:p-8">
+        <div class="schedule-card-head">
+          <span class="schedule-icon schedule-icon-teal"><i class="fa-solid fa-person-running"></i></span>
+          <div>
+            <span class="schedule-label">لياقة وحيوية</span>
+            <h3 class="font-display text-3xl sm:text-4xl">دروس الأيروبيك</h3>
+          </div>
+        </div>
+        <div class="schedule-block">
+          <p class="schedule-coach"><i class="fa-solid fa-user-check"></i> مع الكوتش ابتسام بسمة فرح</p>
+          <div class="schedule-days"><i class="fa-regular fa-calendar-days"></i><span>السبت · الاثنين · الأربعاء</span></div>
+          <div class="schedule-times schedule-times-single"><div><span>الحصة المسائية</span><strong>4:10 مساءً</strong></div></div>
+        </div>
+        <div class="schedule-divider"></div>
+        <div class="schedule-block">
+          <p class="schedule-coach"><i class="fa-solid fa-user-check"></i> مع الكوتش ثناء</p>
+          <div class="schedule-times">
+            <div><span>يومياً صباحاً</span><strong>8:30 صباحاً</strong></div>
+            <div><span>الأحد · الثلاثاء · الخميس</span><strong>5:10 مساءً</strong></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="schedule-card rounded-3xl p-6 sm:p-8">
+        <div class="schedule-card-head">
+          <span class="schedule-icon schedule-icon-teal"><i class="fa-solid fa-venus"></i></span>
+          <div>
+            <span class="schedule-label">يومياً ما عدا الجمعة</span>
+            <h3 class="font-display text-3xl sm:text-4xl">أوقات الأجهزة للسيدات</h3>
+          </div>
+        </div>
+        <div class="schedule-times">
+          <div><span>مع الكوتش بتول شقير</span><strong>8:00 — 11:30 صباحاً</strong></div>
+          <div><span>مع الكوتش مي كنعان</span><strong>4:00 — 7:30 مساءً</strong></div>
+        </div>
+      </article>
+
+      <article class="schedule-card rounded-3xl p-6 sm:p-8">
+        <div class="schedule-card-head">
+          <span class="schedule-icon schedule-icon-orange"><i class="fa-solid fa-mars"></i></span>
+          <div>
+            <span class="schedule-label">يومياً ما عدا الجمعة</span>
+            <h3 class="font-display text-3xl sm:text-4xl">أوقات التدريب للرجال</h3>
+          </div>
+        </div>
+        <p class="schedule-coach"><i class="fa-solid fa-user-check"></i> بإشراف الكوتش طيب سلامة</p>
+        <div class="schedule-times">
+          <div><span>الفترة النهارية</span><strong>11:30 صباحاً — 4:00 ظهراً</strong></div>
+          <div><span>الفترة المسائية</span><strong>7:30 مساءً — 12:00 ليلاً</strong></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="relative py-24 sm:py-32 bg-iron/40 border-y border-steel">
+  <div class="container-page reveal mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <p class="font-mono text-xs sm:text-sm uppercase tracking-[0.3em] text-volt mb-4">
+        أساسياتك الرياضية
+      </p>
+      <h2 class="font-display text-4xl sm:text-5xl tracking-wide">تجهز لكل حصة</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+
+      <!-- Product 1 -->
+      <article class="product-card rounded-2xl overflow-hidden flex flex-col">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            src="assets/images/snacks.png"
+            alt="وجبات خفيفة غنية بالبروتين"
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-5 sm:p-6 flex flex-col gap-2 flex-1">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="font-display text-xl tracking-wide">وجبات بروتينية</h3>
+          </div>
+          <p class="text-ash text-sm leading-relaxed">
+            وجبات سريعة وغنية بالبروتين تمنحك الطاقة اللازمة للتمرين وتساعدك على التعافي.
+          </p>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="product-card rounded-2xl overflow-hidden flex flex-col">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            src="assets/images/trainers.png"
+            alt="حذاء تدريب رياضي"
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-5 sm:p-6 flex flex-col gap-2 flex-1">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="font-display text-xl tracking-wide">أحذية تدريب</h3>
+          </div>
+          <p class="text-ash text-sm leading-relaxed">
+            أحذية ثابتة ومريحة للتمارين، الجري، ورفع الأوزان.
+          </p>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="product-card rounded-2xl overflow-hidden flex flex-col">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            src="assets/images/gym-wear.png"
+            alt="ملابس رياضية للنادي"
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-5 sm:p-6 flex flex-col gap-2 flex-1">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="font-display text-xl tracking-wide">ملابس رياضية</h3>
+          </div>
+          <p class="text-ash text-sm leading-relaxed">
+            ملابس مريحة ومرنة للرجال والنساء، مصممة لتتحرك معك في كل تمرين.
+          </p>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="product-card rounded-2xl overflow-hidden flex flex-col">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img
+            src="assets/images/gym-bag.png"
+            alt="حقيبة رياضية متينة"
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-5 sm:p-6 flex flex-col gap-2 flex-1">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="font-display text-xl tracking-wide">حقيبة النادي</h3>
+          </div>
+          <p class="text-ash text-sm leading-relaxed">
+            حقيبة واسعة وعملية لحمل احتياجاتك اليومية بين المنزل والنادي.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CONTACT ============================== -->
+<section id="contact" class="relative py-24 sm:py-32 bg-void">
+  <div class="container-page reveal mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <p class="font-mono text-xs sm:text-sm uppercase tracking-[0.3em] text-ignition mb-4">
+        تواصل معنا
+      </p>
+      <h2 class="font-display text-4xl sm:text-5xl tracking-wide">جاهز للانطلاق؟</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+
+      <!-- WhatsApp -->
+      <div class="bg-iron border border-steel rounded-2xl p-8 sm:p-10 flex flex-col justify-center items-start gap-5">
+        <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-brand">
+          <i class="fa-brands fa-whatsapp text-2xl text-void"></i>
+        </span>
+        <h3 class="font-display text-2xl tracking-wide">راسلنا عبر واتساب</h3>
+        <p class="text-ash text-sm leading-relaxed">
+          أسرع طريقة لحجز مكانك، أو الاستفسار عن الاشتراكات.
+        </p>
+        <p class="font-mono text-sm text-volt" data-whatsapp-display></p>
+        <a
+          href="#"
+          data-whatsapp-link
+          target="_blank"
+          rel="noopener"
+          class="mt-2 inline-flex items-center gap-2 bg-gradient-brand text-void font-semibold text-sm px-6 py-3 rounded-full hover:opacity-90 transition-opacity"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          ابدأ المحادثة عبر واتساب
+        </a>
+      </div>
+
+      <!-- Map -->
+      <div class="rounded-2xl overflow-hidden map-frame min-h-[320px]">
+        <iframe
+          src="https://www.google.com/maps?q=Sehnaya,+Damascus,+Syria&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0; min-height: 320px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="موقع نادي المنصور الرياضي —اشرفية صحنايا، نزلة مدرسة دار القيم، مقابل سوبر ماركت حلا"
+        ></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="bg-void border-t border-steel py-14">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+
+      <div class="lg:col-span-2">
+        <a href="#hero" class="flex items-center gap-2 mb-4">
+          <i class="fa-solid fa-dumbbell text-gradient text-xl"></i>
+          <span class="font-display text-xl tracking-wider">المنصور</span>
+        </a>
+        <p class="text-ash text-sm max-w-sm leading-relaxed">
+          نادي رياضي للرجال والنساء في اشرفية صحنايا، دمشق، صُمم لمن يأخذ تدريبه بجدية.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-mono text-xs tracking-widest text-ash mb-4">التواصل</h4>
+        <ul class="space-y-3 text-sm text-chalk/90">
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-volt w-4"></i>
+            <span data-whatsapp-display></span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-ignition w-4 mt-0.5"></i>
+            <span>اشرفية صحنايا، نزلة مدرسة دار القيم، مقابل سوبر ماركت حلا</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-mono text-xs tracking-widest text-ash mb-4">تابعنا</h4>
+        <div class="flex items-center gap-4">
+          <a href="#" class="w-10 h-10 rounded-full border border-steel flex items-center justify-center hover:border-volt hover:text-volt transition-colors" aria-label="إنستغرام">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/share/1C6FYr2Sw9/" class="w-10 h-10 rounded-full border border-steel flex items-center justify-center hover:border-volt hover:text-volt transition-colors" aria-label="فيسبوك">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full border border-steel flex items-center justify-center hover:border-volt hover:text-volt transition-colors" aria-label="تيك توك">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pt-8 border-t border-steel flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-ash text-xs">&copy; <span id="year"></span> نادي المنصور الرياضي. جميع الحقوق محفوظة.</p>
+      <p class="text-ash text-xs font-mono flex items-center gap-1.5">
+        <span>مصمم بواسطة</span>
+        <a href="#" data-email-link class="inline-flex items-center gap-2 hover:text-volt transition-colors" title="لحجز موقعك الخاص - تواصل معي عبر البريد الإلكتروني">
+          <span>ليلاس ابوسعيد</span>
+          <i class="fa-solid fa-envelope text-volt" aria-hidden="true"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script defer src="assets/js/config.js"></script>
+<script defer src="assets/js/main.js"></script>
+</body>
+</html>

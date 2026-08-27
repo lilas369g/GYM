@@ -1,0 +1,402 @@
+/* ==========================================================================
+   AL MANSOUR — design tokens + custom treatments
+   (Utility-level layout/spacing is handled by Tailwind classes in index.html;
+   this file only holds what Tailwind can't express: tokens, fonts, keyframes,
+   the navbar signature, and a few bespoke components.)
+   ========================================================================== */
+
+:root {
+  --void: #0a0a0c;
+  --iron: #17171c;
+  --steel: #2a2a31;
+  --ignition: #ff5a1f;
+  --volt: #14e1c8;
+  --chalk: #f4f3ef;
+  --ash: #b3b3bb;
+
+  --font-display: "Tajawal", Arial, sans-serif;
+  --font-body: "Cairo", system-ui, sans-serif;
+  --font-mono: "Cairo", ui-monospace, monospace;
+
+  --nav-h: 4.5rem;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+html,
+body {
+  background: var(--void);
+  color: var(--chalk);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--ignition);
+  color: var(--void);
+}
+
+/* Visible keyboard focus everywhere, always */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--volt);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--ignition), var(--volt));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gradient-brand {
+  background: linear-gradient(90deg, var(--ignition), var(--volt));
+}
+
+/* ==========================================================================
+   NAVBAR — signature element
+   Full-bleed duotone man/woman split silhouette behind the bar; translates
+   fully out of view on scroll-down, back in on scroll-up. See main.js.
+   ========================================================================== */
+
+#navbar {
+  height: var(--nav-h);
+  transform: translateY(0);
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: transform;
+}
+
+#navbar.nav-hidden {
+  transform: translateY(-100%);
+}
+
+#navbar .nav-split-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+#navbar .nav-split-bg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Mobile menu panel */
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+#mobile-menu.open {
+  max-height: 28rem;
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.hero-bg {
+  background-image: linear-gradient(
+      180deg,
+      rgba(10, 10, 12, 0.35) 0%,
+      rgba(10, 10, 12, 0.55) 55%,
+      var(--void) 100%
+    ),
+    linear-gradient(100deg, rgba(255, 90, 31, 0.25), rgba(20, 225, 200, 0.15)),
+    url("../images/hero-athletes.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-scanlines {
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgba(244, 243, 239, 0.035) 0px,
+    rgba(244, 243, 239, 0.035) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+@keyframes chevron-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+}
+
+.scroll-cue {
+  animation: chevron-bounce 1.8s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   ABOUT — watermark
+   ========================================================================== */
+
+.about-watermark {
+  position: absolute;
+  color: var(--steel);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   PRODUCT CARDS
+   ========================================================================== */
+
+.product-card {
+  background: var(--iron);
+  border: 1px solid var(--steel);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--volt);
+  box-shadow: 0 20px 40px -20px rgba(20, 225, 200, 0.35);
+}
+
+/* ==========================================================================
+   CLASS SCHEDULE
+   ========================================================================== */
+
+.schedule-section {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(42, 42, 49, 0.42), transparent 42%),
+    var(--void);
+}
+
+.schedule-glow {
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 999px;
+  filter: blur(110px);
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.schedule-glow-orange {
+  top: 15%;
+  right: -15rem;
+  background: var(--ignition);
+}
+
+.schedule-glow-teal {
+  bottom: 5%;
+  left: -15rem;
+  background: var(--volt);
+}
+
+.schedule-card {
+  position: relative;
+  background: linear-gradient(145deg, rgba(23, 23, 28, 0.98), rgba(12, 12, 15, 0.96));
+  border: 1px solid var(--steel);
+  box-shadow: 0 24px 60px -42px rgba(0, 0, 0, 0.9);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(244, 243, 239, 0.045), transparent 35%);
+  pointer-events: none;
+}
+
+.schedule-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(20, 225, 200, 0.55);
+  box-shadow: 0 28px 65px -38px rgba(20, 225, 200, 0.25);
+}
+
+.schedule-card-featured {
+  border-color: rgba(255, 90, 31, 0.48);
+}
+
+.schedule-card-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.schedule-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 1rem;
+  flex: 0 0 auto;
+  color: var(--void);
+  font-size: 1.25rem;
+}
+
+.schedule-icon-orange {
+  background: linear-gradient(135deg, #ff7b49, var(--ignition));
+}
+
+.schedule-icon-teal {
+  background: linear-gradient(135deg, #5ff3e1, var(--volt));
+}
+
+.schedule-label {
+  display: block;
+  color: var(--ash);
+  font-size: 0.72rem;
+  margin-bottom: 0.15rem;
+}
+
+.schedule-coach,
+.schedule-days {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--ash);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.schedule-coach i,
+.schedule-days i {
+  color: var(--volt);
+  width: 1rem;
+  text-align: center;
+}
+
+.schedule-times {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.schedule-times > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem;
+  background: rgba(10, 10, 12, 0.72);
+  border: 1px solid rgba(42, 42, 49, 0.9);
+  border-radius: 1rem;
+}
+
+.schedule-times span {
+  color: var(--ash);
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+.schedule-times strong {
+  color: var(--chalk);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.schedule-times-single {
+  grid-template-columns: 1fr;
+}
+
+.schedule-divider {
+  height: 1px;
+  margin: 1.35rem 0;
+  background: linear-gradient(90deg, transparent, var(--steel), transparent);
+}
+
+@media (max-width: 520px) {
+  .schedule-card-head {
+    align-items: flex-start;
+  }
+
+  .schedule-times {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-price {
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   WHATSAPP CTA — subtle glow pulse
+   ========================================================================== */
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(20, 225, 200, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(20, 225, 200, 0);
+  }
+}
+
+.whatsapp-cta {
+  animation: glow-pulse 2.6s ease-out infinite;
+}
+
+/* ==========================================================================
+   SCROLL REVEAL
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   MAP FRAME
+   ========================================================================== */
+
+.map-frame {
+  filter: grayscale(0.4) contrast(1.1);
+  border: 1px solid var(--steel);
+}
+
+/* Ultrawide guardrail: keep line-length sane past 2xl instead of stretching */
+@media (min-width: 1920px) {
+  .container-page {
+    max-width: 1600px;
+    margin-inline: auto;
+  }
+}
