@@ -42,7 +42,7 @@ window.SITE_CONFIG = ${JSON.stringify(
     WHATSAPP_NUMBER: whatsappNumber,
     CONTACT_EMAIL: contactEmail,
     WHATSAPP_DEFAULT_MESSAGE:
-      "مرحباً نادي المنصور، أود حجز حصة تجريبية مجانية.",
+      "مرحباً نادي المنصور، أود الاشتراك معكم.",
   },
   null,
   2
