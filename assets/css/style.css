@@ -172,17 +172,44 @@ button:focus-visible {
 @keyframes chevron-bounce {
   0%,
   100% {
-    transform: translateY(0);
-    opacity: 0.6;
+    transform: translate(-50%, 0);
+    opacity: 1;
   }
   50% {
-    transform: translateY(8px);
+    transform: translate(-50%, 8px);
     opacity: 1;
   }
 }
 
 .scroll-cue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  color: var(--void);
+  background: rgba(244, 243, 239, 0.9);
+  border: 1px solid rgba(20, 225, 200, 0.65);
+  border-radius: 999px;
+  box-shadow: 0 0 0 6px rgba(10, 10, 12, 0.35), 0 10px 28px rgba(0, 0, 0, 0.35);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   animation: chevron-bounce 1.8s ease-in-out infinite;
+}
+
+.scroll-cue i {
+  color: var(--void);
+  opacity: 1;
+  text-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .scroll-cue {
+    bottom: 1.25rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+  }
 }
 
 /* ==========================================================================
@@ -333,15 +360,84 @@ button:focus-visible {
 
 .martial-arts-card {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   align-items: stretch;
 }
 
-.martial-arts-card > img {
+.martial-arts-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(8.5rem, 0.34fr);
+  min-height: 22rem;
+  overflow: hidden;
+  background: #090a14;
+}
+
+.martial-arts-photo {
   width: 100%;
   height: 100%;
-  min-height: 22rem;
   object-fit: cover;
+}
+
+.goku-panel {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1rem 0.25rem 0;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(223, 232, 255, 0.75) 0%, rgba(120, 112, 255, 0.34) 24%, transparent 58%),
+    linear-gradient(180deg, #10152d 0%, #070911 100%);
+}
+
+.goku-panel::before,
+.goku-panel::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.goku-panel::before {
+  z-index: -1;
+  inset: 8% -15% 2%;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at center, rgba(236, 243, 255, 0.95) 0 12%, rgba(85, 219, 255, 0.7) 28%, rgba(118, 83, 255, 0.6) 48%, transparent 72%);
+  filter: blur(11px);
+  animation: aura-pulse 2.8s ease-in-out infinite;
+}
+
+.goku-panel::after {
+  inset: 1rem 0.5rem;
+  border: 1px solid rgba(151, 205, 255, 0.22);
+  border-radius: 50%;
+  box-shadow: inset 0 0 28px rgba(116, 89, 255, 0.2), 0 0 26px rgba(69, 209, 255, 0.16);
+}
+
+.goku-figure {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 12rem);
+  max-height: 21rem;
+  object-fit: contain;
+  object-position: center bottom;
+  filter:
+    drop-shadow(0 0 5px rgba(244, 248, 255, 0.95))
+    drop-shadow(0 0 13px rgba(68, 216, 255, 0.78))
+    drop-shadow(0 0 24px rgba(126, 82, 255, 0.7));
+}
+
+@keyframes aura-pulse {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
 }
 
 @media (max-width: 767px) {
@@ -349,9 +445,18 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .martial-arts-card > img {
+  .martial-arts-visual {
+    grid-template-columns: minmax(0, 1fr) minmax(7.5rem, 0.38fr);
     min-height: 0;
     aspect-ratio: 4 / 3;
+  }
+
+  .goku-panel {
+    padding-top: 0.5rem;
+  }
+
+  .goku-figure {
+    max-height: 100%;
   }
 }
 
