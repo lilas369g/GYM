@@ -101,6 +101,23 @@
     menu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", closeMenu);
     });
+
+    document.addEventListener("click", (event) => {
+      if (
+        menu.classList.contains("open") &&
+        !menu.contains(event.target) &&
+        !toggle.contains(event.target)
+      ) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menu.classList.contains("open")) {
+        closeMenu();
+        toggle.focus();
+      }
+    });
   }
 
   /* ------------------------------------------------------------------ */

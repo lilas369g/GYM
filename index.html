@@ -9,7 +9,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="image" href="assets/images/hero-athletes.webp" type="image/webp" fetchpriority="high" />
+<link rel="preload" as="image" href="assets/images/hero-coach.webp" type="image/webp" fetchpriority="high" />
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet" />
 
 <!-- Font Awesome (icons only, no emojis) -->
@@ -94,9 +94,9 @@
 
     <nav class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-ash">
       <a href="#hero" class="hover:text-chalk transition-colors">الرئيسية</a>
-      <a href="#about" class="hover:text-chalk transition-colors">من نحن</a>
+      <a href="#about" class="hover:text-chalk transition-colors">لماذا نادي المنصور</a>
       <a href="#hours" class="hover:text-chalk transition-colors">أوقات الدوام</a>
-      <a href="#products" class="hover:text-chalk transition-colors">المتجر</a>
+      <a href="#products" class="hover:text-chalk transition-colors">النادي والأجهزة</a>
       <a href="#contact" class="hover:text-chalk transition-colors">تواصل معنا</a>
     </nav>
 
@@ -125,9 +125,9 @@
   <div id="mobile-menu" class="md:hidden relative z-10 border-t border-steel bg-void/98">
     <nav class="flex flex-col px-6 py-4 gap-1 font-mono text-sm uppercase tracking-widest text-ash">
       <a href="#hero" class="py-3 border-b border-steel hover:text-chalk transition-colors">الرئيسية</a>
-      <a href="#about" class="py-3 border-b border-steel hover:text-chalk transition-colors">من نحن</a>
+      <a href="#about" class="py-3 border-b border-steel hover:text-chalk transition-colors">لماذا نادي المنصور</a>
       <a href="#hours" class="py-3 border-b border-steel hover:text-chalk transition-colors">أوقات الدوام</a>
-      <a href="#products" class="py-3 border-b border-steel hover:text-chalk transition-colors">المتجر</a>
+      <a href="#products" class="py-3 border-b border-steel hover:text-chalk transition-colors">النادي والأجهزة</a>
       <a href="#contact" class="py-3 border-b border-steel hover:text-chalk transition-colors">تواصل معنا</a>
       <a
         href="#"
@@ -147,18 +147,18 @@
 <section id="hero" class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
   <div
     class="hero-bg absolute inset-0"
-    style="--hero-image:url('assets/images/hero-athletes.webp');"
+    style="--hero-image:url('assets/images/hero-coach.webp');"
     role="img"
     aria-label="رياضي ورياضية يتدربان في أجواء احترافية"
   ></div>
   <div class="hero-scanlines absolute inset-0"></div>
 
   <div class="container-page relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-    <div class="max-w-2xl mx-auto text-center">
+    <div class="w-full min-w-0 max-w-2xl mx-auto text-center">
       <p class="font-mono text-xs sm:text-sm uppercase tracking-[0.3em] text-volt mb-5">
         نادي المنصور الرياضي &middot; اشرفية صحنايا
       </p>
-      <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-wide mb-6">
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl leading-[1.05] sm:leading-[0.95] tracking-wide mb-6 break-words">
         ابدأ رحلة <span class="text-gradient">تحوّل جسمك</span> اليوم
       </h1>
       <p class="text-ash text-base sm:text-lg max-w-xl mb-9 leading-relaxed">
@@ -177,9 +177,20 @@
     </div>
   </div>
 
-  <a href="#about" class="scroll-cue absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-chalk/70" aria-label="انتقل إلى قسم من نحن">
+  <a href="#about" class="scroll-cue absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-chalk/70" aria-label="انتقل إلى قسم لماذا نادي المنصور">
     <i class="fa-solid fa-chevron-down text-2xl"></i>
   </a>
+</section>
+
+<!-- ============================== TRUST STRIP ============================== -->
+<section class="trust-strip border-y border-steel" aria-label="مزايا النادي ووسائل التواصل">
+  <div class="container-page mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-5 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+    <div class="trust-item"><i class="fa-solid fa-medal"></i><span>خبرة وإشراف تدريبي احترافي</span></div>
+    <div class="trust-item"><i class="fa-solid fa-people-group"></i><span>برامج للرجال والسيدات والأطفال</span></div>
+    <a href="#" data-whatsapp-link target="_blank" rel="noopener" class="trust-item trust-phone" aria-label="تواصل مع نادي المنصور عبر واتساب">
+      <i class="fa-brands fa-whatsapp"></i><span data-whatsapp-display></span>
+    </a>
+  </div>
 </section>
 
 <!-- ============================== ABOUT ============================== -->
@@ -188,12 +199,12 @@
 
   <div class="container-page reveal relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-10 text-center">
     <p class="font-mono text-xs sm:text-sm uppercase tracking-[0.3em] text-ignition mb-6">
-      من نحن
+      لماذا نادي المنصور؟
     </p>
     <blockquote class="font-display text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-wide border-l-4 border-transparent" style="border-image: linear-gradient(180deg, var(--ignition), var(--volt)) 1;">
       <p class="font-body font-medium text-2xl sm:text-3xl lg:text-4xl leading-snug text-chalk normal-case tracking-normal">
-        &ldquo;في نادي المنصور، نؤمن بأن اللياقة ليست مرحلة مؤقتة، بل أسلوب حياة.
-        صممنا نادينا ليكون مساحة ملهمة تتحقق فيها الأهداف وتتجاوز فيها الحدود.&rdquo;
+        &ldquo;لأنك تستحق مكاناً يجمع بين الأجهزة المتنوعة، الإشراف الاحترافي، والبرامج المناسبة لكل أفراد العائلة.
+        في نادي المنصور نساعدك على بناء القوة واللياقة والثقة ضمن بيئة تدريب محفزة.&rdquo;
       </p>
     </blockquote>
   </div>
@@ -283,6 +294,26 @@
           <div><span>الحصة المسائية</span><strong>7:30 مساءً — 12:00 ليلاً</strong></div>
         </div>
       </article>
+
+      <article class="schedule-card martial-arts-card rounded-3xl overflow-hidden lg:col-span-2">
+        <img
+          src="assets/images/club/kids-martial-arts.webp"
+          alt="أطفال يتدربون على الألعاب القتالية في نادي المنصور"
+          loading="lazy"
+        />
+        <div class="p-6 sm:p-8">
+          <div class="schedule-card-head">
+            <span class="schedule-icon schedule-icon-orange"><i class="fa-solid fa-hand-fist"></i></span>
+            <div>
+              <span class="schedule-label">من دوراتنا</span>
+              <h3 class="font-display text-3xl sm:text-4xl">الألعاب القتالية للأطفال</h3>
+            </div>
+          </div>
+          <p class="text-ash text-base sm:text-lg leading-relaxed">
+            دورات الكيك بوكسينغ والمواي تاي لإنشاء جيل صلب ومرن وذي شخصية قوية، ضمن تدريب منظم وآمن يناسب الأطفال.
+          </p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -291,9 +322,9 @@
   <div class="container-page reveal mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
     <div class="text-center max-w-2xl mx-auto mb-14">
       <p class="font-mono text-xs sm:text-sm uppercase tracking-[0.3em] text-volt mb-4">
-        أساسياتك الرياضية
+        تجهيزات نادي المنصور
       </p>
-      <h2 class="font-display text-4xl sm:text-5xl tracking-wide">تجهز لكل حصة</h2>
+      <h2 class="font-display text-4xl sm:text-5xl tracking-wide">أجهزة وأثقال لكل أهدافك</h2>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
@@ -302,18 +333,18 @@
       <article class="product-card rounded-2xl overflow-hidden flex flex-col">
         <div class="aspect-[4/3] overflow-hidden">
           <img
-            src="assets/images/snacks.webp"
-            alt="وجبات خفيفة غنية بالبروتين"
+            src="assets/images/club/free-weights.webp"
+            alt="مجموعة الأوزان الحرة في نادي المنصور"
             loading="lazy"
             class="w-full h-full object-cover"
           />
         </div>
         <div class="p-5 sm:p-6 flex flex-col gap-2 flex-1">
           <div class="flex items-start justify-between gap-3">
-            <h3 class="font-display text-xl tracking-wide">وجبات بروتينية</h3>
+            <h3 class="font-display text-xl tracking-wide">أوزان حرة متكاملة</h3>
           </div>
           <p class="text-ash text-sm leading-relaxed">
-            وجبات سريعة وغنية بالبروتين تمنحك الطاقة اللازمة للتمرين وتساعدك على التعافي.
+            أوزان متعددة تناسب مختلف مستويات التدريب وتساعدك على تطوير القوة بثبات.
           </p>
         </div>
       </article>
@@ -322,18 +353,18 @@
       <article class="product-card rounded-2xl overflow-hidden flex flex-col">
         <div class="aspect-[4/3] overflow-hidden">
           <img
-            src="assets/images/trainers.webp"
-            alt="حذاء تدريب رياضي"
+            src="assets/images/club/leg-press.webp"
+            alt="جهاز ضغط الأرجل في نادي المنصور"
             loading="lazy"
             class="w-full h-full object-cover"
           />
         </div>
         <div class="p-5 sm:p-6 flex flex-col gap-2 flex-1">
           <div class="flex items-start justify-between gap-3">
-            <h3 class="font-display text-xl tracking-wide">أحذية تدريب</h3>
+            <h3 class="font-display text-xl tracking-wide">أجهزة القوة</h3>
           </div>
           <p class="text-ash text-sm leading-relaxed">
-            أحذية ثابتة ومريحة للتمارين، الجري، ورفع الأوزان.
+            أجهزة متنوعة لتدريب الأرجل والجزء العلوي بمرونة وأمان.
           </p>
         </div>
       </article>
@@ -342,18 +373,18 @@
       <article class="product-card rounded-2xl overflow-hidden flex flex-col">
         <div class="aspect-[4/3] overflow-hidden">
           <img
-            src="assets/images/gym-wear.webp"
-            alt="ملابس رياضية للنادي"
+            src="assets/images/club/shoulder-press.webp"
+            alt="جهاز تدريب الأكتاف في نادي المنصور"
             loading="lazy"
             class="w-full h-full object-cover"
           />
         </div>
         <div class="p-5 sm:p-6 flex flex-col gap-2 flex-1">
           <div class="flex items-start justify-between gap-3">
-            <h3 class="font-display text-xl tracking-wide">ملابس رياضية</h3>
+            <h3 class="font-display text-xl tracking-wide">تجهيز احترافي</h3>
           </div>
           <p class="text-ash text-sm leading-relaxed">
-            ملابس مريحة ومرنة للرجال والنساء، مصممة لتتحرك معك في كل تمرين.
+            تجهيزات مختارة لتغطية مجموعات العضلات الأساسية ضمن برنامج متوازن.
           </p>
         </div>
       </article>
@@ -362,22 +393,34 @@
       <article class="product-card rounded-2xl overflow-hidden flex flex-col">
         <div class="aspect-[4/3] overflow-hidden">
           <img
-            src="assets/images/gym-bag.webp"
-            alt="حقيبة رياضية متينة"
+            src="assets/images/club/martial-arts-hall.webp"
+            alt="صالة الألعاب القتالية في نادي المنصور"
             loading="lazy"
             class="w-full h-full object-cover"
           />
         </div>
         <div class="p-5 sm:p-6 flex flex-col gap-2 flex-1">
           <div class="flex items-start justify-between gap-3">
-            <h3 class="font-display text-xl tracking-wide">حقيبة النادي</h3>
+            <h3 class="font-display text-xl tracking-wide">صالة الألعاب القتالية</h3>
           </div>
           <p class="text-ash text-sm leading-relaxed">
-            حقيبة واسعة وعملية لحمل احتياجاتك اليومية بين المنزل والنادي.
+            مساحة تدريب مجهزة لدورات الكيك بوكسينغ والمواي تاي والتمارين الحركية.
           </p>
         </div>
       </article>
 
+    </div>
+
+    <div class="club-gallery mt-6 lg:mt-8" aria-label="معرض أجهزة نادي المنصور">
+      <img src="assets/images/club/chest-machine.webp" alt="جهاز تدريب الصدر" loading="lazy" />
+      <img src="assets/images/club/dip-machine.webp" alt="جهاز تمارين الدفع" loading="lazy" />
+      <img src="assets/images/club/arm-machine.webp" alt="جهاز تدريب عضلات الذراع" loading="lazy" />
+      <img src="assets/images/club/hip-machine.webp" alt="جهاز تدريب عضلات الورك" loading="lazy" />
+      <img src="assets/images/club/leg-extension.webp" alt="جهاز تمديد الأرجل" loading="lazy" />
+      <img src="assets/images/club/pulldown-machine.webp" alt="جهاز السحب العلوي" loading="lazy" />
+      <img src="assets/images/club/leg-curl.webp" alt="جهاز ثني الأرجل" loading="lazy" />
+      <img src="assets/images/club/pec-deck.webp" alt="جهاز تدريب الصدر والأكتاف" loading="lazy" />
+      <img src="assets/images/club/triceps-machine.webp" alt="جهاز تدريب العضلة ثلاثية الرؤوس" loading="lazy" />
     </div>
   </div>
 </section>
