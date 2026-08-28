@@ -116,6 +116,19 @@ button:focus-visible {
   max-height: 28rem;
 }
 
+#mobile-menu {
+  background: rgba(244, 243, 239, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+#mobile-menu nav {
+  color: var(--void);
+}
+
+#mobile-menu a:hover {
+  color: var(--ignition);
+}
+
 /* ==========================================================================
    HERO
    ========================================================================== */
@@ -134,7 +147,7 @@ button:focus-visible {
 }
 
 /* Keep both athletes visible on portrait screens instead of cropping them. */
-@media (max-width: 767px) {
+@media (max-width: 767px), (max-aspect-ratio: 3 / 4) {
   .hero-bg {
     background-size: cover, cover, 115% auto;
     background-position: center, center, center 18%;
