@@ -26,12 +26,9 @@
     document.querySelectorAll("[data-whatsapp-display]").forEach((el) => {
       const configuredNumber =
         el.dataset.whatsappDisplay === "women"
-          ? cfg.WOMEN_WHATSAPP_DISPLAY_NUMBER || cfg.WOMEN_WHATSAPP_NUMBER
-          : cfg.MEN_WHATSAPP_DISPLAY_NUMBER ||
-            cfg.MEN_WHATSAPP_NUMBER ||
-            cfg.WHATSAPP_NUMBER;
-      const number = (configuredNumber || "").replace(/\D/g, "");
-      el.textContent = number;
+          ? cfg.WOMEN_WHATSAPP_DISPLAY_NUMBER
+          : cfg.MEN_WHATSAPP_DISPLAY_NUMBER;
+      el.textContent = configuredNumber || "";
     });
   }
 

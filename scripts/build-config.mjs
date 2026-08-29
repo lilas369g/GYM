@@ -44,12 +44,18 @@ const womenWhatsappLinkNumber = toWhatsAppNumber(
   process.env.WOMEN_WHATSAPP_NUMBER ||
   values.WOMEN_WHATSAPP_NUMBER
 );
-// The phone number printed on the page is sourced from .env only.
-const menWhatsappDisplayNumber = (values.WHATSAPP_NUMBER || "").replace(/\D/g, "");
-const womenWhatsappDisplayNumber = (values.WOMEN_WHATSAPP_NUMBER || "").replace(
-  /\D/g,
-  ""
-);
+// Display values never use the international link number, so visitors see the
+// exact local format chosen in the server settings (or .env during preview).
+const menWhatsappDisplayNumber =
+  process.env.DISPLAY_M_NUMBER ||
+  values.DISPLAY_M_NUMBER ||
+  values.WHATSAPP_NUMBER ||
+  "";
+const womenWhatsappDisplayNumber =
+  process.env.DISPLAY_W_NUMBER ||
+  values.DISPLAY_W_NUMBER ||
+  values.WOMEN_WHATSAPP_NUMBER ||
+  "";
 const contactEmail =
   process.env.CONTACT_EMAIL || values.CONTACT_EMAIL || "";
 
