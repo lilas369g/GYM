@@ -22,7 +22,9 @@ python3 -m http.server 8080
 
 ## Before going live
 
-1. Set `WHATSAPP_NUMBER` and `CONTACT_EMAIL` in `.env`, then run
+1. ضع الأرقام الظاهرة في `WHATSAPP_NUMBER` (رجال) و`WOMEN_WHATSAPP_NUMBER`
+   (سيدات) داخل `.env`. روابط واتساب نفسها تستخدم الأرقام المطابقة من إعدادات
+   السيرفر، ثم شغّل
    `npm run build:config`. Do not edit `assets/js/config.js` directly.
 2. Swap the placeholder images in `index.html` for real photography.
 3. Update the dummy phone number, address, and social links in the footer.

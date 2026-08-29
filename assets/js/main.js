@@ -6,16 +6,29 @@
   /* ------------------------------------------------------------------ */
   function wireWhatsApp() {
     const cfg = window.SITE_CONFIG || {};
-    const number = (cfg.WHATSAPP_NUMBER || "").replace(/\D/g, "");
-    const message = encodeURIComponent(cfg.WHATSAPP_DEFAULT_MESSAGE || "");
-    const href = number
-      ? `https://wa.me/${number}${message ? `?text=${message}` : ""}`
-      : "#";
-
     document.querySelectorAll("[data-whatsapp-link]").forEach((el) => {
+      const audience = el.dataset.whatsappLink;
+      const configuredNumber =
+        audience === "women"
+          ? cfg.WOMEN_WHATSAPP_NUMBER
+          : cfg.MEN_WHATSAPP_NUMBER || cfg.WHATSAPP_NUMBER;
+      const number = (configuredNumber || "").replace(/\D/g, "");
+      const message = encodeURIComponent(
+        audience === "women"
+          ? cfg.WOMEN_WHATSAPP_DEFAULT_MESSAGE || cfg.WHATSAPP_DEFAULT_MESSAGE || ""
+          : cfg.MEN_WHATSAPP_DEFAULT_MESSAGE || cfg.WHATSAPP_DEFAULT_MESSAGE || ""
+      );
+      const href = number
+        ? `https://wa.me/${number}${message ? `?text=${message}` : ""}`
+        : "#";
       el.setAttribute("href", href);
     });
     document.querySelectorAll("[data-whatsapp-display]").forEach((el) => {
+      const configuredNumber =
+        el.dataset.whatsappDisplay === "women"
+          ? cfg.WOMEN_WHATSAPP_DISPLAY_NUMBER
+          : cfg.MEN_WHATSAPP_DISPLAY_NUMBER;
+      const number = (configuredNumber || "").replace(/\D/g, "");
       el.textContent = number;
     });
   }
