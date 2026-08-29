@@ -26,8 +26,8 @@
     document.querySelectorAll("[data-whatsapp-display]").forEach((el) => {
       const configuredNumber =
         el.dataset.whatsappDisplay === "women"
-          ? cfg.WOMEN_WHATSAPP_DISPLAY_NUMBER
-          : cfg.MEN_WHATSAPP_DISPLAY_NUMBER;
+          ? cfg.DISPLAY_W_NUMBER
+          : cfg.DISPLAY_M_NUMBER;
       el.textContent = configuredNumber || "";
     });
   }

@@ -66,8 +66,8 @@ window.SITE_CONFIG = ${JSON.stringify(
     WHATSAPP_NUMBER: menWhatsappLinkNumber,
     MEN_WHATSAPP_NUMBER: menWhatsappLinkNumber,
     WOMEN_WHATSAPP_NUMBER: womenWhatsappLinkNumber,
-    MEN_WHATSAPP_DISPLAY_NUMBER: menWhatsappDisplayNumber,
-    WOMEN_WHATSAPP_DISPLAY_NUMBER: womenWhatsappDisplayNumber,
+    DISPLAY_M_NUMBER: menWhatsappDisplayNumber,
+    DISPLAY_W_NUMBER: womenWhatsappDisplayNumber,
     CONTACT_EMAIL: contactEmail,
     WHATSAPP_DEFAULT_MESSAGE:
       "مرحباً نادي المنصور، أود الاشتراك معكم.",
