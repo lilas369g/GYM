@@ -27,17 +27,23 @@ for (const rawLine of envFile.split(/\r?\n/)) {
   values[key] = value;
 }
 
-// WhatsApp links use server variables only, so their target is managed from
-// deployment settings rather than the repository's local .env file.
-const menWhatsappLinkNumber = (
+function toWhatsAppNumber(value) {
+  const number = (value || "").replace(/\D/g, "");
+  // Local Syrian mobile numbers (09xxxxxxxx) need the country code for wa.me.
+  return number.startsWith("0") ? `963${number.slice(1)}` : number;
+}
+
+// Server variables take precedence; .env keeps local previews working.
+const menWhatsappLinkNumber = toWhatsAppNumber(
   process.env.MEN_WHATSAPP_NUMBER ||
   process.env.WHATSAPP_NUMBER ||
-  ""
-).replace(/\D/g, "");
-const womenWhatsappLinkNumber = (
+  values.MEN_WHATSAPP_NUMBER ||
+  values.WHATSAPP_NUMBER
+);
+const womenWhatsappLinkNumber = toWhatsAppNumber(
   process.env.WOMEN_WHATSAPP_NUMBER ||
-  ""
-).replace(/\D/g, "");
+  values.WOMEN_WHATSAPP_NUMBER
+);
 // The phone number printed on the page is sourced from .env only.
 const menWhatsappDisplayNumber = (values.WHATSAPP_NUMBER || "").replace(/\D/g, "");
 const womenWhatsappDisplayNumber = (values.WOMEN_WHATSAPP_NUMBER || "").replace(
