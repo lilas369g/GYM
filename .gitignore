@@ -1,3 +1,12 @@
 .env
+node_modules/
+.next/
+.npm-cache/
+playwright-report/
+test-results/
+*.tsbuildinfo
+data/site-content.e2e.json
+public/uploads/*
+!public/uploads/.gitkeep
 assets/js/config.js
-
+.env.local

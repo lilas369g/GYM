@@ -1,0 +1,329 @@
+{
+  "revision": 2,
+  "updatedAt": "2026-09-02T10:18:26.481Z",
+  "seo": {
+    "title": "نادي المنصور الرياضي | اشرفية صحنايا",
+    "description": "نادي المنصور الرياضي للرجال والسيدات في اشرفية صحنايا."
+  },
+  "brand": {
+    "name": "المنصور",
+    "location": "نادي المنصور الرياضي · اشرفية صحنايا",
+    "footerDescription": "نادي رياضي للرجال والنساء في اشرفية صحنايا، دمشق، صُمم لمن يأخذ تدريبه بجدية."
+  },
+  "header": {
+    "nav": [
+      {
+        "id": "nav-home",
+        "label": "الرئيسية",
+        "target": "hero",
+        "visible": true
+      },
+      {
+        "id": "nav-about",
+        "label": "لماذا نادي المنصور",
+        "target": "about",
+        "visible": true
+      },
+      {
+        "id": "nav-programs",
+        "label": "برامجنا",
+        "target": "hours",
+        "visible": true
+      },
+      {
+        "id": "nav-club",
+        "label": "النادي والأجهزة",
+        "target": "products",
+        "visible": true
+      },
+      {
+        "id": "nav-contact",
+        "label": "تواصل معنا",
+        "target": "contact",
+        "visible": true
+      }
+    ],
+    "ctaLabel": "تواصل معنا"
+  },
+  "hero": {
+    "eyebrow": "نادي المنصور الرياضي · اشرفية صحنايا",
+    "titleBefore": "ابدأ رحلة",
+    "titleHighlight": "تحوّل جسمك",
+    "titleAfter": "اليوم",
+    "description": "تدرّب مع مدربين محترفين في بيئة مجهزة بالكامل ومصممة لتناسب أهدافك الرياضية.",
+    "ctaLabel": "احجز مكانك الآن",
+    "image": {
+      "src": "/uploads/1788344246618-335b44bb-3111-41a4-88f7-2750d92b9b0e.webp",
+      "alt": "رياضي ورياضية يتدربان في أجواء احترافية"
+    }
+  },
+  "trust": [
+    "خبرة وإشراف تدريبي احترافي",
+    "برامج للرجال والسيدات والأطفال"
+  ],
+  "programsSection": {
+    "eyebrow": "الحصص وأوقات التدريب",
+    "title": "اختر حصتك وابدأ بطاقة",
+    "description": "حصص جماعية مليئة بالحماس، وأوقات تدريب مخصصة للسيدات والرجال بإشراف مدربين محترفين."
+  },
+  "programs": [
+    {
+      "id": "zumba",
+      "label": "طاقة وحرق عالٍ",
+      "title": "دروس الزومبا",
+      "coach": "مع الكوتش خلود",
+      "days": "السبت · الاثنين · الأربعاء",
+      "times": [
+        "9:30 صباحاً"
+      ],
+      "description": "",
+      "image": {
+        "src": "",
+        "alt": ""
+      },
+      "accent": "teal",
+      "visible": true
+    },
+    {
+      "id": "dance",
+      "label": "لياقة وإيقاع",
+      "title": "دروس الرقص الشرقي",
+      "coach": "مع الكوتش خلود",
+      "days": "الأحد · الثلاثاء · الخميس",
+      "times": [
+        "9:30 صباحاً"
+      ],
+      "description": "",
+      "image": {
+        "src": "",
+        "alt": ""
+      },
+      "accent": "teal",
+      "visible": true
+    },
+    {
+      "id": "aerobics",
+      "label": "حركة ولياقة",
+      "title": "دروس الأيروبيك",
+      "coach": "مع الكوتش خلود",
+      "days": "السبت · الاثنين · الأربعاء",
+      "times": [
+        "10:30 صباحاً"
+      ],
+      "description": "",
+      "image": {
+        "src": "",
+        "alt": ""
+      },
+      "accent": "orange",
+      "visible": true
+    },
+    {
+      "id": "women-training",
+      "label": "خصوصية وراحة",
+      "title": "أوقات الأجهزة للسيدات",
+      "coach": "بإشراف مدربات مختصات",
+      "days": "يومياً ما عدا الجمعة",
+      "times": [
+        "8:00 صباحاً – 2:00 ظهراً"
+      ],
+      "description": "",
+      "image": {
+        "src": "",
+        "alt": ""
+      },
+      "accent": "teal",
+      "visible": true
+    },
+    {
+      "id": "men-training",
+      "label": "قوة وتقدّم",
+      "title": "أوقات التدريب للرجال",
+      "coach": "بإشراف مدربين مختصين",
+      "days": "يومياً ما عدا الجمعة",
+      "times": [
+        "2:00 ظهراً – 12:00 ليلاً"
+      ],
+      "description": "",
+      "image": {
+        "src": "",
+        "alt": ""
+      },
+      "accent": "orange",
+      "visible": true
+    },
+    {
+      "id": "kids-martial-arts",
+      "label": "قوة · انضباط · ثقة",
+      "title": "الألعاب القتالية للأطفال",
+      "coach": "مع مدربين متخصصين",
+      "days": "مواعيد متعددة خلال الأسبوع",
+      "times": [
+        "تواصل معنا لمعرفة المواعيد"
+      ],
+      "description": "كيك بوكسينغ ومواي تاي ضمن بيئة آمنة ومحفزة تساعد الأطفال على بناء اللياقة والثقة.",
+      "image": {
+        "src": "/assets/images/club/kids-martial-arts.webp",
+        "alt": "تدريب الألعاب القتالية للأطفال"
+      },
+      "accent": "teal",
+      "visible": true
+    }
+  ],
+  "facilitiesSection": {
+    "eyebrow": "النادي والأجهزة",
+    "title": "أجهزة وأثقال لكل أهدافك",
+    "description": "مساحات تدريب متكاملة وتجهيزات مختارة لتخدم كل مستوى، من بداية رحلتك حتى الأداء الاحترافي."
+  },
+  "facilities": [
+    {
+      "id": "free-weights",
+      "title": "أوزان حرة متكاملة",
+      "description": "تشكيلة واسعة من الدمبلز والأوزان الحرة لبناء القوة والكتلة العضلية.",
+      "image": {
+        "src": "/assets/images/club/free-weights.webp",
+        "alt": "منطقة الأوزان الحرة في نادي المنصور"
+      },
+      "visible": true
+    },
+    {
+      "id": "strength-machines",
+      "title": "أجهزة القوة",
+      "description": "أجهزة متنوعة ومدروسة لتدريب عضلات الجسم بأمان وفعالية.",
+      "image": {
+        "src": "/assets/images/club/leg-press.webp",
+        "alt": "جهاز تمارين القوة في النادي"
+      },
+      "visible": true
+    },
+    {
+      "id": "professional-equipment",
+      "title": "تجهيز احترافي",
+      "description": "تجهيزات مختارة لتغطية مجموعات العضلات الأساسية ضمن برنامج متوازن.",
+      "image": {
+        "src": "/assets/images/club/shoulder-press.webp",
+        "alt": "تجهيزات رياضية احترافية"
+      },
+      "visible": true
+    },
+    {
+      "id": "martial-arts-hall",
+      "title": "صالة الألعاب القتالية",
+      "description": "مساحة تدريب مجهزة لدورات الكيك بوكسينغ والمواي تاي والتمارين الحركية.",
+      "image": {
+        "src": "/assets/images/club/martial-arts-hall.webp",
+        "alt": "صالة الألعاب القتالية في نادي المنصور"
+      },
+      "visible": true
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gallery-1",
+      "src": "/assets/images/club/chest-machine.webp",
+      "alt": "جهاز تدريب الصدر",
+      "visible": true
+    },
+    {
+      "id": "gallery-2",
+      "src": "/assets/images/club/dip-machine.webp",
+      "alt": "جهاز تمارين الدفع",
+      "visible": true
+    },
+    {
+      "id": "gallery-3",
+      "src": "/assets/images/club/arm-machine.webp",
+      "alt": "جهاز تدريب عضلات الذراع",
+      "visible": true
+    },
+    {
+      "id": "gallery-4",
+      "src": "/assets/images/club/hip-machine.webp",
+      "alt": "جهاز تدريب عضلات الورك",
+      "visible": true
+    },
+    {
+      "id": "gallery-5",
+      "src": "/assets/images/club/leg-extension.webp",
+      "alt": "جهاز تمديد الأرجل",
+      "visible": true
+    },
+    {
+      "id": "gallery-6",
+      "src": "/assets/images/club/pulldown-machine.webp",
+      "alt": "جهاز السحب العلوي",
+      "visible": true
+    },
+    {
+      "id": "gallery-7",
+      "src": "/assets/images/club/leg-curl.webp",
+      "alt": "جهاز ثني الأرجل",
+      "visible": true
+    },
+    {
+      "id": "gallery-8",
+      "src": "/assets/images/club/pec-deck.webp",
+      "alt": "جهاز تدريب الصدر والأكتاف",
+      "visible": true
+    },
+    {
+      "id": "gallery-9",
+      "src": "/assets/images/club/triceps-machine.webp",
+      "alt": "جهاز تدريب العضلة ثلاثية الرؤوس",
+      "visible": true
+    }
+  ],
+  "offers": [
+    {
+      "id": "supplements",
+      "title": "المكملات الغذائية",
+      "description": "موجود كل أنواع البروتين والكرياتين والمكملات والفيتامينات.",
+      "image": {
+        "src": "/assets/images/club/supplements.webp",
+        "alt": "تشكيلة من البروتين والكرياتين والفيتامينات"
+      },
+      "visible": true
+    },
+    {
+      "id": "sports-accessories",
+      "title": "الأدوات الرياضية",
+      "description": "موجود جميع الأدوات الرياضية مثل فيزونات، شناتي، كفوف ومشدات.",
+      "image": {
+        "src": "/assets/images/club/sports-accessories.webp",
+        "alt": "ملابس وأدوات رياضية متنوعة"
+      },
+      "visible": true
+    }
+  ],
+  "about": {
+    "eyebrow": "لماذا نادي المنصور؟",
+    "body": "لأنك تستحق مكاناً يجمع بين الأجهزة المتنوعة، الإشراف الاحترافي، والبرامج المناسبة لكل أفراد العائلة. في نادي المنصور نساعدك على بناء القوة واللياقة والثقة ضمن بيئة تدريب محفزة."
+  },
+  "contact": {
+    "eyebrow": "تواصل معنا",
+    "title": "جاهز للانطلاق؟",
+    "menTitle": "تواصل الرجال عبر واتساب",
+    "menDescription": "للاستفسار عن تدريب الرجال والاشتراكات وحجز مكانك.",
+    "menButtonLabel": "ابدأ المحادثة عبر واتساب",
+    "menWhatsappNumber": "0988316161",
+    "menDisplayNumber": "0988316161",
+    "menMessage": "مرحباً نادي المنصور، أود الاستفسار عن تدريب الرجال والاشتراكات.",
+    "womenTitle": "تواصل السيدات عبر واتساب",
+    "womenDescription": "للاستفسار عن حصص السيدات والاشتراكات وحجز مكانك.",
+    "womenButtonLabel": "ابدئي المحادثة عبر واتساب",
+    "womenWhatsappNumber": "0992570279",
+    "womenDisplayNumber": "0992570279",
+    "womenMessage": "مرحباً نادي المنصور، أود الاستفسار عن حصص السيدات والاشتراكات.",
+    "address": "أشرفية صحنايا، مدرسة حسين زين، سوبر ماركت حلا",
+    "mapEmbedUrl": "https://www.google.com/maps?q=%D8%A3%D8%B4%D8%B1%D9%81%D9%8A%D8%A9%20%D8%B5%D8%AD%D9%86%D8%A7%D9%8A%D8%A7%20%D9%85%D8%AF%D8%B1%D8%B3%D8%A9%20%D8%AD%D8%B3%D9%8A%D9%86%20%D8%B2%D9%8A%D9%86%20%D8%B3%D9%88%D8%A8%D8%B1%20%D9%85%D8%A7%D8%B1%D9%83%D8%AA%20%D8%AD%D9%84%D8%A7&output=embed",
+    "mapTitle": "موقع نادي المنصور الرياضي — أشرفية صحنايا"
+  },
+  "footer": {
+    "contactLabel": "التواصل",
+    "socialLabel": "تابعنا",
+    "facebookUrl": "https://www.facebook.com/share/1C6FYr2Sw9/",
+    "copyrightText": "نادي المنصور الرياضي. جميع الحقوق محفوظة.",
+    "designerName": "ليلاس ابوسعيد",
+    "designerEmail": ""
+  }
+}

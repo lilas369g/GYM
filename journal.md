@@ -59,3 +59,37 @@
 - Replace dummy phone number / social links in the footer.
 - Swap the Google Maps query for the gym's exact pinned coordinates once
   available (currently a text-query embed for "Sehnaya, Damascus, Syria").
+
+---
+
+## Session 2 — 2026-09-02
+
+**Requested roles:** Next.js full-stack engineer and E2E responsive tester.
+
+### Full-stack migration
+
+- Superseded the former static-only architecture with Next.js App Router,
+  React, and TypeScript.
+- Added a secure owner login and `/admin` content dashboard.
+- Made SEO, header/navigation, hero, trust lines, programs/schedules,
+  facilities/gallery/offers, About, contact/map, and footer content editable.
+- Added separate WhatsApp link/display values and messages for men and women.
+- Added raster upload handling with 5 MB limits and file-signature validation.
+- Added atomic JSON persistence, update revisions, conflict detection, strict
+  validation, signed HTTP-only sessions, rate-limited login, and same-origin
+  mutation checks.
+- Preserved the Arabic RTL public design while correcting tablet navigation and
+  contact layout pressure identified during the responsive audit.
+
+### E2E automation
+
+- Added Playwright coverage for auth, content publishing, phone output, media
+  validation, unsaved-change protection, menu accessibility, admin reachability,
+  and public overflow at 320–3440 px.
+- Added isolated E2E content storage so tests do not overwrite live content.
+
+### Deferred for owner approval
+
+- Draft/publish workflow, revision history/rollback, responsive image cropping,
+  schedule conflict/holiday notices, analytics, scheduled publishing, and
+  multi-user roles.
